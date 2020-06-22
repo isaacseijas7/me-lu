@@ -1,0 +1,44 @@
+body {
+  min-height: 75rem;
+  padding-top: 4.3rem;
+}
+
+img.logo {
+  width: 59px;
+}
+
+img.foto_portada {
+  width: 100%;
+}
+
+.bg-pink {
+  background-color: #dfb084;
+}
+
+.bg-pink .nav-link {
+  padding: .9rem 1rem;
+  display: flex;
+	flex-direction: column;
+}
+
+
+.bg-pink a.nav-link::after{
+	content: "";
+	background-color: #000;
+	height: 2px;
+	bottom: -2px;
+	width: 100%;
+	margin: 0 auto;
+	transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+	opacity: 0;
+	transform: scaleX(0);
+}
+
+.bg-pink li a.nav-link{
+  color: #000!important;
+}
+
+.bg-pink li:hover > a.nav-link::after, .bg-pink li:focus > a.nav-link::after {
+	opacity: 1;
+  transform: scaleX(1);
+}
