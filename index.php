@@ -1,14 +1,14 @@
 <?php
 
-$file = "./inicio.php";
+$file = "./pages/inicio.php";
 
 if ($_GET["page"]) {
 
-  $file = "./" . $_GET["page"] . ".php";
+  $file = "./pages/" . $_GET["page"] . ".php";
   $file_exists = file_exists($file);
 
   if (!$file_exists) {
-    $file = "./404.php";
+    $file = "./pages/404.php";
   }
 }
 
@@ -28,7 +28,7 @@ if ($_GET["page"]) {
 
 <body>
 
-  <?php include_once("./navbar.php"); ?>
+  <?php include_once("./components/navbar.php"); ?>
 
   <main role="main">
     <?php include_once($file); ?>
